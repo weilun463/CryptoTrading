@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -32,7 +33,7 @@ public class CryptoTradingController {
     @PostMapping("/trade")
     public String trade(@RequestParam String symbol,
                         @RequestParam String tradeType,
-                        @RequestParam Double quantity) {
+                        @RequestParam BigDecimal quantity) {
         return tradingService.trade(symbol.toUpperCase(), tradeType.toUpperCase(), quantity);
     }
 

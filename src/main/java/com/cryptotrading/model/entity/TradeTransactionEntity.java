@@ -3,6 +3,7 @@ package com.cryptotrading.model.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,8 +15,8 @@ public class TradeTransactionEntity {
     private Long id;
     private String symbol;
     private String tradeType;
-    private Double price;
-    private Double quantity;
-    private Double amount;
+    private BigDecimal price;
+    private BigDecimal quantity;
+    private BigDecimal amount;
     private LocalDateTime tradeTime;
 }

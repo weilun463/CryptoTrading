@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 @Component
 @RequiredArgsConstructor
 public class DataInitializer implements CommandLineRunner {
@@ -18,9 +20,9 @@ public class DataInitializer implements CommandLineRunner {
         if (userWalletRepository.findById(1L).isEmpty()) {
             UserWalletEntity wallet = new UserWalletEntity();
             wallet.setId(1L);
-            wallet.setUsdtBalance(50000.0);
-            wallet.setBtcBalance(0.0);
-            wallet.setEthBalance(0.0);
+            wallet.setUsdtBalance(BigDecimal.valueOf(50000.0));
+            wallet.setBtcBalance(BigDecimal.valueOf(0.0));
+            wallet.setEthBalance(BigDecimal.valueOf(0.0));
 
             userWalletRepository.save(wallet);
 

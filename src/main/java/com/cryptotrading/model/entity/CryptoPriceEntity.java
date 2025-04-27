@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.time.Instant;
+
 @Entity
 @Data
 public class CryptoPriceEntity {
@@ -12,5 +14,5 @@ public class CryptoPriceEntity {
     private String symbol;
     private Double bidPrice;
     private Double askPrice;
-    private Long updatedAt;
+    private Instant updatedAt;
 }

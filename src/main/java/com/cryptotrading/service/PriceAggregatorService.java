@@ -43,11 +43,11 @@ public class PriceAggregatorService {
                 price.setSymbol(symbol);
                 price.setBidPrice(bestBid);
                 price.setAskPrice(bestAsk);
-                price.setUpdatedAt(Instant.now().toEpochMilli());
+                price.setUpdatedAt(Instant.now());
 
                 cryptoPriceRepository.save(price);
 
-                System.out.printf("Saved price for %s - Bid: %.2f, Ask: %.2f, Time: %s%n", symbol, bestBid, bestAsk, Instant.ofEpochMilli(price.getUpdatedAt()));
+                System.out.printf("Saved price for %s - Bid: %.2f, Ask: %.2f, Time: %s%n", symbol, bestBid, bestAsk, price.getUpdatedAt().toString());
             }
         });
     }
