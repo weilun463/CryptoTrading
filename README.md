@@ -1,4 +1,4 @@
-# 🦹‍♂️ Software-Engineer-Backend-Technical-Test-Zhang-Weilun
+# 🦹‍♂️ CryptoTrading
 
 This is a simple backend application for simulating cryptocurrency trading activities.  
 It supports **buying**, **selling**, and **price aggregation** for selected cryptocurrencies.
@@ -52,13 +52,13 @@ It supports **buying**, **selling**, and **price aggregation** for selected cryp
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/weilun463/Software-Engineer-Backend-Technical-Test-Zhang-Weilun.git
+git clone https://github.com/weilun463/CryptoTrading.git
 ```
 
 ### 2. Navigate into the project folder:
 
 ```bash
-cd Software-Engineer-Backend-Technical-Test-Zhang-Weilun
+cd CryptoTrading
 ```
 
 ### 3. Build and run the application:
